@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@font-face {
+    font-family:"Saira ExtraCondensed ExtraBold";
+    src: url(Font/saira-extracondensed-extrabold.woff) format("woff"),
+    url(Font/saira-extracondensed-extrabold.woff2) format("woff2");
+}
+*{padding: 0; margin: 0; 
+    -ms-user-select: none; 
+		-moz-user-select: none; 
+		-webkit-user-select: none; 
+		user-select: none;
+    box-sizing: border-box;font-family: 'Saira ExtraCondensed ExtraBold', cursive;
+}
+img {
+    pointer-events: none
+  }
+  
+.Logo{
+    margin-top: 40px;
+    width: 85px;
+}
+.BurgerMenu{
+ display: none;
+}
+.TriggerLabel{
+    position: relative;
+width: 40px;
+height: 40px;
+display: block;
+top: 10px;
+left: 10px;
+}
+.TriggerLabel div{
+width: 40px;
+height: 6px;
+background-color: white;
+border-radius: 20px;
+position: absolute;
+transition: 0.4s;
+}
+.TriggerUp{
+    top: 0px;
+}
+.TriggerMiddle{  
+    top: 13px;
+}
+.TriggerDown{
+    top: 26px;
+}
+.BurgerMenu Input{
+    opacity: 0;
+    position: absolute;
+}
+.BurgerMenu Input:checked+label>.TriggerUp{
+    transform: rotate(45deg);
+    top: 13px;
+}
+.BurgerMenu Input:checked+label>.TriggerDown {
+    transform: rotate(-45deg);
+    top: 13px;
+}
+.BurgerMenu Input:checked+label>.TriggerMiddle {
+    opacity: 0;
+}
+.BurgerMenuList{
+    width: 150px;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-150px);
+    transition: 0.4s;
+    text-align: center;
+    padding:15px;
+   
+
+    /* margin-top: 15px; */
+}
+.BurgerMenuList a{
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+}
+.BurgerMenu Input:checked~.BurgerMenuList {
+    transform: translateX(0px);
+}
+.Menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15%;
+    background-color:#272727;
+    height: 100vh;
+    border-right: 24px solid white; 
+}
+.MenuList{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin-bottom: 200px;
+}
+.MenuList a {
+    text-decoration: none;
+    color: white;
+    padding: 12px 20px;
+    font-size: 35px;
+    width: 100%;
+    text-align: right;
+    transition: 0.4s;
+}
+.MenuList a:hover{
+background:white;
+color: black;
+}
+.Main{
+    width: 85%;
+    margin-left:15%;
+    padding:  20px;
+}
+h1{
+    font-family: "Saira ExtraCondensed ExtraBold";
+}
+.Header p{
+    font-family: "Saira ExtraCondensed ExtraBold";
+}
+.Header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    font-size: 42px;
+}
+.HeaderText{
+    width: 50%;
+    text-align: center;
+}
+.HeaderImage{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.HeaderImage img{
+    width: 80%;
+}
+
+.BG{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    object-fit: cover;
+}
+h2{
+font-family: "Saira ExtraCondensed ExtraBold";
+color: white;
+margin-bottom: 20px;
+font-size: 50px;
+}
+.ImagesContent{
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.ImageItem{
+    padding: 20px;
+    width: 49%;
+    margin: 20px 0;
+    height: 500px;
+    background-color: rgba(70, 69, 69, 0.336);
+    border-radius: 80px;
+    box-shadow: 0 0 20px black;
+    position: relative;
+}
+.ImageItem img{
+  width: 100%;
+
+}
+.ImageItemBG{
+    transition: 0.8s;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.733) ;
+    color: white;
+    top: 0;
+    left: 0;
+    border-radius: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    opacity:0;
+}
+.ImageItemBG:hover{
+    opacity: 1;
+}
+.Trigger{
+    background:rgba(0, 0, 0, 0.5) ;
+    color: white;
+    padding: 5px 50px;
+    border-radius: 80px;
+    font-size: 40px;
+    letter-spacing: 1px;
+    margin: auto;
+    display: block;
+    width: fit-content;
+}
+.TriggerInput{
+    position: absolute;
+    opacity: 0;
+}
+.MoreContent{
+ 
+}
+.TriggerInput:checked+label~.MyProjects>.MoreContent{
+    display: flex;
+}
+.AboutMeContent{
+    display: flex;
+    align-items: center;
+}
+.AboutMeImage{
+    width: 40%;
+}
+.AboutMeText{
+    width: 60%;
+    color: white;
+}
+.AboutMeImage img{
+    width: 100%;
+}
+.AboutMeIcons{
+    display: flex;
+    margin-bottom: 25px;
+
+}
+.IconsItem{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    font-size: 30px;
+}
+.IconsItem p{
+   margin-left: 20px;
+}
+.AboutP{
+    font-size: 30px;
+    background-color: rgba(70, 69, 69, 0.336);
+    box-shadow: 0 0 20px black;
+    padding: 25px;
+    border-radius: 40px;
+}
+.ContainerContact{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+}
+.ContactsItems{
+    width: 45%;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+.ContactsItems img{
+    width: 50px;
+    margin-right: 20px;
+}
+.Contact{
+    margin-top: 100px;
+}
+.ImageTest img{
+    border-radius:100px;
+}

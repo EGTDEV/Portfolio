@@ -1,0 +1,93 @@
+@media(max-width:912px) {
+    .Menu {
+        display: none;
+    }
+
+    .BurgerMenu {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        width: 300px;
+    }
+    .BurgerMenuList{
+        transform: translateX(-300px);
+    }
+    .BurgerMenuList a{
+      
+        font-size: 60px;
+        
+        
+    }
+    .Main {
+        width: 100%;
+        margin: 0;
+    }
+    .ImageItem {
+        width: 49%;
+        height: 290px;
+    }
+}
+@media(max-width:540px) {
+    .Menu {
+        display: none;
+    }
+
+    .BurgerMenu {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        width: 150px;
+    }
+    .BurgerMenuList a{
+        font-size: 25px;
+    }
+    .HeaderImage {
+        display: none;
+    }
+
+    .HeaderText {
+        width: 100%;
+    }
+
+    .Main {
+        width: 100%;
+        margin: 0;
+    }
+
+    .ImageItem {
+        width: 100%;
+        height: 250px;
+    }
+
+    .AboutMeContent {
+        flex-direction: column;
+    }
+
+    .AboutMeImage {
+        width: 100%;
+    }
+
+    .AboutMeText {
+        width: 100%;
+    }
+
+    .IconsItem {
+        flex-direction: column;
+    }
+
+    .AboutP {
+        font-size: 25px;
+    }
+
+    .ContactsItems {
+        width: 100%;
+        flex-direction: column;
+        margin: 20px 0;
+        align-items: center;
+    }
+}
+
