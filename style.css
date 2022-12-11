@@ -181,6 +181,9 @@ font-size: 50px;
     height: 500px;
     background-color: rgba(70, 69, 69, 0.336);
     border-radius: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     box-shadow: 0 0 20px black;
     position: relative;
 }
