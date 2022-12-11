@@ -220,16 +220,10 @@ font-size: 50px;
     margin: auto;
     display: block;
     width: fit-content;
-}
-.TriggerInput{
-    position: absolute;
-    opacity: 0;
+    cursor: pointer;
 }
 .MoreContent{
- 
-}
-.TriggerInput:checked+label~.MyProjects>.MoreContent{
-    display: flex;
+ display: none;
 }
 .AboutMeContent{
     display: flex;
